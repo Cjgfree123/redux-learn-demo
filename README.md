@@ -39,3 +39,36 @@ ownProps:只要接收到的新的父级传进来的数据，就会在运行一�
 
 connect(mapStateProp,mapDispatchProp)(App)
 ```
+
+## redux 使用
+
+### 1.打开redux-devtools 
+
+参考简书: https://www.jianshu.com/p/266159a1c795
+
+步骤:
+
+(1) 在index.js里, import {createStore, applyMiddleware} from 'redux'
+
+(2) 安装谷歌插件
+
+(3) 项目里安装: npm install  redux-devtools-extension --save-dev
+
+(4) 在index.js里
+```
+// 引入redux-devtools-extension的可视化工具。
+import { composeWithDevTools } from 'redux-devtools-extension'
+
+export default  createStore(
+    storeReducer,
+    composeWithDevTools(
+    )
+)
+```
+
+## 遇到问题
+
+1.react-scripts: command not found
+
+解决:重新装包; 或 将项目所有文件复制到一个空的文件夹里后npm i
+
