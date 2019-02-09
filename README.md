@@ -72,3 +72,13 @@ export default  createStore(
 
 解决:重新装包; 或 将项目所有文件复制到一个空的文件夹里后npm i
 
+2.如果reducer里边state为下面格式,即便数据更新到了redux,页面也检测不到 (深拷贝)
+
+```
+state={
+    userInfo:{
+        name:'',
+        age:1
+    }
+}
+```
